@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "JetBrains Mono", monospace;
 }
+/*#region nav-menu*/
 .main-menu, .dropdown-content {
     list-style-type: none;
 }
@@ -53,6 +54,8 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*#endregion */
+/* region Containers*/
 .container{
     display: flex;
     flex-direction: column;
@@ -82,13 +85,30 @@
                 }
             }
         }
+        & .container-experience-info{
+            display: flex;
+            flex-direction: row;
+            gap: 5vw;
+            color: white;
+            & div{
+                padding: 20px;
+                background-color: #333;
+                border-radius: 1vh;
+                min-width: 15vw;
+                max-width: 15vw;
+                & li {
+                    list-style: none;
+                }
+            }
+        }
     }
 
 }
+/* endregion */
+/* region table */
 .languages {
     border-collapse: collapse;
     margin-top: 20px;
-    font-family: sans-serif;
     border-radius: 1vh;
     overflow: hidden;
     min-width: 80vw;
@@ -120,4 +140,5 @@
         }
     }
 }
+/* endregion */
 
