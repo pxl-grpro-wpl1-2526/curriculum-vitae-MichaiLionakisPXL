@@ -9,7 +9,7 @@
 }
 .main-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     background-color: #333;
 }
@@ -24,16 +24,18 @@
         align-items: center;
         justify-content: center;
         height: 100%;
-        padding: 15px 20px;
+        padding: 2vh;
         text-decoration: none;
         color: white;
+        transition: transform 0.2s ease-in-out;
         img {
             max-height: 20px;
             max-width: 20px;
         }
-        &:hover {
-            background-color: #333;
-        }
+    }
+    a:hover {
+        background-color: #555;
+        transform: scale(1.1);
     }
 }
 .dropdown {
@@ -44,7 +46,7 @@
     position: absolute;
     top: 100%;
     min-width: 160px;
-    background-color: #555;
+    background-color: #333;
 }
 .dropdown:hover .dropdown-content {
     display: block;
@@ -52,12 +54,32 @@
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    max-width: 100vh;
+    margin: auto;
+    & .container-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1vh;
+        & .container-info{
+            display: flex;
+            flex-direction: row;
+            & img{
+                max-height: 10vh;
+                max-width: 10vh;
+                min-width: 10vh;
+                min-height: 10vh;
+                margin-right: 1vh;
+                transition: transform 0.5s ease-in-out;
+                &:hover{
+                    box-shadow: #333 5px 5px;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
 }
-.container-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
