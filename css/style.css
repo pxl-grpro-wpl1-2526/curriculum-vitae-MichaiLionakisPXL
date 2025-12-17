@@ -84,6 +84,7 @@ html {
                 min-height: 10vh;
                 margin-right: 1vh;
                 transition: transform 0.5s ease-in-out;
+                border-radius: 2vh;
                 &:hover{
                     box-shadow: #333 5px 5px;
                     transform: scale(1.1);
